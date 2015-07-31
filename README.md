@@ -22,7 +22,7 @@ Please follow these guidelines when making contributions.
 
 ##Nice to know
 
-1. Almost all methods in this library are pure
+1. Almost all methods in this library are [pure](https://github.com/magnusulf/MujLib/blob/master/src/main/java/dk/muj/mujlib/doc/Pure.java)
 and we try to promote functional paradigms.
 
 2. This library uses Java 8
