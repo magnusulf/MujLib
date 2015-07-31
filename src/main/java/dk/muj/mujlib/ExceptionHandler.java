@@ -143,7 +143,8 @@ public interface ExceptionHandler<T extends Throwable>
 	 * @return
 	 * True if the runnable ran successfully.
 	 * If it fails false is returned. Unless, the exception
-	 * was rethrown by this exception handler.
+	 * was rethrown by this exception handler,
+	 * in that case nothign is returned.
 	 * @throws T
 	 * This method might throw. Depending on the exception handler.
 	 */

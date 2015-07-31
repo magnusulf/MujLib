@@ -149,6 +149,7 @@ public final class MSuppliers
 
 	/**
 	 * Creates a supplier, which always returns {@code null}.
+	 * Equal to {@code MPredicates::getNull}
 	 * @param <T>
 	 * Generic type of the supplier
 	 * @return
