@@ -24,6 +24,8 @@
 
 package dk.muj.mujlib.util;
 
+import dk.muj.mujlib.arg.Argument;
+import dk.muj.mujlib.arg.ArgumentNullException;
 import dk.muj.mujlib.doc.Hacky;
 import dk.muj.mujlib.doc.Pure;
 
@@ -77,10 +79,13 @@ public final class Mujtil
 	 *
 	 * @param t
 	 * The throwable to throw sneakily
+	 * @throws ArgumentNullException
+	 * If and only if t is null.
 	 */
 	@Hacky
-	public static void sneakyThrow(Throwable t)
+	public static void sneakyThrow(Throwable t) throws ArgumentNullException
 	{
+		Argument.handleNull(t, "t");
 		Mujtil.<RuntimeException>sneakyThrow0(t);
 	}
 

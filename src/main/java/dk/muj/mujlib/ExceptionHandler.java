@@ -24,6 +24,8 @@
 
 package dk.muj.mujlib;
 
+import dk.muj.mujlib.arg.Argument;
+import dk.muj.mujlib.arg.ArgumentNullException;
 import dk.muj.mujlib.util.Mujtil;
 
 import java.util.concurrent.Callable;
@@ -56,6 +58,12 @@ public interface ExceptionHandler<T extends Throwable>
 	 * 1. Print the stack trace.
 	 * 2. Ignore it.
 	 * 3. Rethrow it
+	 *
+	 * This method can behave as it wishes
+	 * if the specified throwable is null.
+	 * Different implementations will throw different exceptions,
+	 * other implementations might not do anything.
+	 *
 	 * @param t
 	 * The throwable to handle.
 	 */
@@ -118,9 +126,12 @@ public interface ExceptionHandler<T extends Throwable>
 	 * then null is returned.
 	 * @throws T
 	 * This method might throw. Depending on the exception handler.
+	 * @throws ArgumentNullException
+	 * If and only if callable is null.
 	 */
-	public default <V> V tryCall(Callable<V> callable) throws T
+	public default <V> V tryCall(Callable<V> callable) throws T, ArgumentNullException
 	{
+		Argument.handleNull(callable, "callable");
 		try
 		{
 			return callable.call();
@@ -147,9 +158,12 @@ public interface ExceptionHandler<T extends Throwable>
 	 * in that case nothign is returned.
 	 * @throws T
 	 * This method might throw. Depending on the exception handler.
+	 * @throws ArgumentNullException
+	 * If and only if runnable is null.
 	 */
-	public default boolean tryRun(ThrowingRunnable runnable) throws T
+	public default boolean tryRun(ThrowingRunnable runnable) throws T, ArgumentNullException
 	{
+		Argument.handleNull(runnable, "runnable");
 		try
 		{
 			runnable.throwingRun();
