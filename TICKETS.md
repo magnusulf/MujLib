@@ -56,8 +56,8 @@ Even if there is no plans to implement a feature request, it should often still 
 any developer interested in this project, could potentially implement it.
 
 ####Invalid
-Any issue being discussions, bug reports, todos, questions or something else.
-Which is using an invalid format, should be marked with this label.
+Any issue being discussions, bug reports, todos, questions or something else,
+which is using an invalid format, should be marked with this label.
 We currently don't have any strict format rules, so this will rarely be used.
 
 All invalid formatted issues should be closed instantaneously.

@@ -13,20 +13,26 @@ See how GitHub issues should be used [here](https://github.com/magnusulf/MujLib/
 GitHub issues are used for keeping track of many things including, bugs, todos, feature requests, discussions and more.
 
 ####Pull requests
-See how pull requests are handled in this reporistory [here](https://github.com/magnusulf/MujLib/blob/master/PR.md)
+See how pull requests are handled in this repository [here](https://github.com/magnusulf/MujLib/blob/master/PR.md)
 We have some strict rules about pull requests.
+
+####Code style
+See the code style guidelines for this project [here](https://github.com/magnusulf/MujLib/blob/master/STYLE.md)
+Please follow these guidelines when making contributions.
 
 ##Nice to know
 
 1. Almost all methods in this library are pure
 and we try to promote functional paradigms.
 
-2. Unless otherwise stated, everything is non-null.
+2. This library uses Java 8
 
-3. All ranges will have an inclusive start, and exclusive end,
+3. Unless otherwise stated, everything is non-null.
+
+4. All ranges will have an inclusive start, and exclusive end,
 unless otherwise stated.
 
-4. This library will do it`s best to not accept your input.
+5. This library will do it`s best to not accept your input.
 It prefers to just throw an exception, rather than
 giving special not so obvious treatment to odd input.
 Perfect cases are null, NaN, infinity and negative numbers,
