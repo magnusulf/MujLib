@@ -59,19 +59,19 @@ and many methods will fail if given them as input.
   * Easy vararg instantiation of a mutable map `MCollections.map()`.
 
 7. **Argument checker**
-  * Easy argument checking of null `Argument.handleNull`.
-  * Easy argument checking of NaN `Argument.handleNaN`.
-  * Easy argument checking of float or double infinity `Argument.handleInfinity`.
-  * Easy argument checking for both NaN and infinity `Argument.handleStrange`.
+  * Easy argument checking of null `Argument.handleNull()`.
+  * Easy argument checking of NaN `Argument.handleNaN()`.
+  * Easy argument checking of float or double infinity `Argument.handleInfinity()`.
+  * Easy argument checking for both NaN and infinity `Argument.handleStrange()`.
 
 8. **Math**
-  * Odd and even predicates `Mth.isOdd` and `Mth.isEven`.
-  * Positive and negative predicates `Mth.isPositive` and `Mth.isNegative`.
-  * Calculate factorial `Mth.factorial`.
-  * Calculate binomial coefficient `Mth.binomial`.
+  * Odd and even predicates `Mth.isOdd()` and `Mth.isEven()`.
+  * Positive and negative predicates `Mth.isPositive` and `Mth.isNegative()`.
+  * Calculate factorial `Mth.factorial()`.
+  * Calculate binomial coefficient `Mth.binomial()`.
 
 9. **Exception handling**
   * Easily perform a piece of code throwing an exception without try-catch statements.
   You can rethrow the exception, either checked or unchecked, print the stack trace or just ignore it.
   Do this with the "ExceptionHandler" class.
-  * We also offer a way to throw checked exceptions as if they were unchecked `Mujtil.throwSneaky(ex)`.
+  * We also offer a way to throw checked exceptions as if they were unchecked `Mujtil.throwSneaky()`.
