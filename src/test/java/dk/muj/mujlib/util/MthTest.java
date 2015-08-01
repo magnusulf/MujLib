@@ -71,24 +71,26 @@ public class MthTest extends TestCase
 	// -------------------------------------------- //
 	// BINOMIAL COEFFICIENT
 	// -------------------------------------------- //
-	// TODO: Add more cases to binomial coefficient methods. Try to be as varied as possible. Catch all cases.
-	// The reason for this is that these methods are not very fast.
-	// They could certainly be optimised.
-	// But to avoid breaking functionality, we should have lots of tests in place.
-	// However, I have yet to see a use of these functions, where speed matters,
-	// before anyone should begin to optimise at all.
-	// Since we know the current implementation is working,
-	// we could use that for assertions, if implementing a new one.
 
 	@Test
 	public void testBinomialPrecise() throws Exception
 	{
 		assertEquals(BigInteger.valueOf(10), Mth.binomialPrecise(5, 2));
 		assertEquals(BigInteger.valueOf(10), Mth.binomialPrecise(5, 3));
+		assertEquals(BigInteger.valueOf(5), Mth.binomialPrecise(5, 4));
 		assertEquals(BigInteger.valueOf(1), Mth.binomialPrecise(317, 317));
 		assertEquals(BigInteger.valueOf(15504), Mth.binomialPrecise(20, 5));
 		assertEquals(BigInteger.valueOf(680), Mth.binomialPrecise(17, 14));
+		assertEquals(BigInteger.valueOf(190), Mth.binomialPrecise(20, 2));
+		assertEquals(BigInteger.valueOf(120), Mth.binomialPrecise(10, 3));
+		assertEquals(BigInteger.valueOf(27132), Mth.binomialPrecise(19, 6));
+		assertEquals(BigInteger.valueOf(48620), Mth.binomialPrecise(18, 9));
+		assertEquals(BigInteger.valueOf(1716), Mth.binomialPrecise(13, 6));
+
+		// Special
 		assertEquals(BigInteger.valueOf(741), Mth.binomialPrecise(39, 2));
+		assertEquals(BigInteger.valueOf(348330136), Mth.binomialPrecise(37, 10));
+		assertEquals(BigInteger.valueOf(666), Mth.binomialPrecise(37, 2));
 	}
 
 	@Test
@@ -96,10 +98,15 @@ public class MthTest extends TestCase
 	{
 		assertEquals(10, Mth.binomialExact(5, 2));
 		assertEquals(10, Mth.binomialExact(5, 3));
+		assertEquals(5, Mth.binomialExact(5, 4));
 		assertEquals(1, Mth.binomialExact(317, 317));
 		assertEquals(15504, Mth.binomialExact(20, 5));
 		assertEquals(680, Mth.binomialExact(17, 14));
 		assertEquals(190, Mth.binomialExact(20, 2));
+		assertEquals(120, Mth.binomialExact(10, 3));
+		assertEquals(27132, Mth.binomialExact(19, 6));
+		assertEquals(48620, Mth.binomialExact(18, 9));
+		assertEquals(1716, Mth.binomialExact(13, 6));
 	}
 
 	// -------------------------------------------- //
